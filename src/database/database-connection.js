@@ -1,6 +1,6 @@
 import * as SQLite from 'expo-sqlite';
 
-// Conexão com o Banco de Dados do Sqlite 
+// Conexion con SQLITE datos locales 
 export const DatabaseConnection = {
   getConnection: () => SQLite.openDatabase("database.db"),
 };

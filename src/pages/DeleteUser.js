@@ -18,8 +18,8 @@ const DeleteUser = ({ navigation }) => {
           console.log('Results', results.rowsAffected);
           if (results.rowsAffected > 0) {
             Alert.alert(
-              'Sucesso',
-              'Usuário Excluído com Sucesso !',
+              'Proceso Exitoso',
+              'Usuario dado de baja con exito !',
               [
                 {
                   text: 'Ok',
@@ -29,7 +29,7 @@ const DeleteUser = ({ navigation }) => {
               { cancelable: false }
             );
           } else {
-            alert('Por favor entre com um código de usuário válido !');
+            alert('Ingrese un codigo de usuario valido!');
           }
         }
       );
@@ -41,13 +41,13 @@ const DeleteUser = ({ navigation }) => {
       <View style={{ flex: 1, backgroundColor: 'white' }}>
         <View style={{ flex: 1 }}>
           <Mytextinput
-            placeholder="Entre com o Código do Usuário"
+            placeholder="Ingrese un codigo de usuario valido"
             onChangeText={
               (inputUserId) => setInputUserId(inputUserId)
             }
             style={{ padding: 10 }}
           />
-          <Mybutton title="Excluir Usuário" customClick={deleteUser} />
+          <Mybutton title="Borrar usuario" customClick={deleteUser} />
         </View>
       </View>
     </SafeAreaView>

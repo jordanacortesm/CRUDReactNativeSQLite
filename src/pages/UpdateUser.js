@@ -43,7 +43,7 @@ const UpdateUser = ({ navigation }) => {
               res.user_address
             );
           } else {
-            alert('Usuário não encontrado!');
+            alert('Usuario no encontrado!');
             updateAllStates('', '', '');
           }
         }
@@ -54,19 +54,19 @@ const UpdateUser = ({ navigation }) => {
     console.log(inputUserId, userName, userContact, userAddress);
 
     if (!inputUserId) {
-      alert('Por Favor informe o Código!');
+      alert('Por Favor informe el Código!');
       return;
     }
     if (!userName) {
-      alert('Por favor informe o Nome !');
+      alert('Por favor informe el Nombre !');
       return;
     }
     if (!userContact) {
-      alert('Por Favor informe o Telefone !');
+      alert('Por Favor informe el telefono !');
       return;
     }
     if (!userAddress) {
-      alert('Por Favor informe o endereço !');
+      alert('Por Favor informe la direccion !');
       return;
     }
 
@@ -78,8 +78,8 @@ const UpdateUser = ({ navigation }) => {
           console.log('Results', results.rowsAffected);
           if (results.rowsAffected > 0) {
             Alert.alert(
-              'Sucesso',
-              'Usuário atualizado com sucesso !!',
+              'Exito',
+              'Usuário atualizado con exito !!',
               [
                 {
                   text: 'Ok',
@@ -88,7 +88,7 @@ const UpdateUser = ({ navigation }) => {
               ],
               { cancelable: false }
             );
-          } else alert('Erro ao atualizar o usuário');
+          } else alert('Error al actualizar el usuario');
         }
       );
     });
@@ -104,7 +104,7 @@ const UpdateUser = ({ navigation }) => {
               style={{ flex: 1, justifyContent: 'space-between' }}>
               <Mytext text="Filtro de Usuário" />
               <Mytextinput
-                placeholder="Entre com o Código do Usuário"
+                placeholder="Ingrese código de Usuário"
                 style={{ padding: 10 }}
                 onChangeText={
                   (inputUserId) => setInputUserId(inputUserId)
@@ -115,7 +115,7 @@ const UpdateUser = ({ navigation }) => {
                 customClick={searchUser}
               />
               <Mytextinput
-                placeholder="Entre com o Nome"
+                placeholder="Ingrese Nombre"
                 value={userName}
                 style={{ padding: 10 }}
                 onChangeText={
@@ -123,7 +123,7 @@ const UpdateUser = ({ navigation }) => {
                 }
               />
               <Mytextinput
-                placeholder="Entre com o Telefone"
+                placeholder="Ingrese Telefono"
                 value={'' + userContact}
                 onChangeText={
                   (userContact) => setUserContact(userContact)
@@ -134,7 +134,7 @@ const UpdateUser = ({ navigation }) => {
               />
               <Mytextinput
                 value={userAddress}
-                placeholder="Entre com o Endereço"
+                placeholder="Ingrese dirección"
                 onChangeText={
                   (userAddress) => setUserAddress(userAddress)
                 }
@@ -144,7 +144,7 @@ const UpdateUser = ({ navigation }) => {
                 style={{ textAlignVertical: 'top', padding: 10 }}
               />
               <Mybutton
-                title="Atualizar Usuário"
+                title="Actualizar Usuário"
                 customClick={updateUser}
               />
             </KeyboardAvoidingView>

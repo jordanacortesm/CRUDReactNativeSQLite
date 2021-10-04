@@ -39,7 +39,7 @@ const HomeScreen = ({ navigation }) => {
             />
 
             <MyImageButton
-              title="Atualizar Usuário"
+              title="Actualizar Usuário"
               btnColor='#A45BB9'
               btnIcon="user-circle"
               customClick={() => navigation.navigate('Update')}

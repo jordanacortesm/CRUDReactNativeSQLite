@@ -21,15 +21,15 @@ const RegisterUser = ({ navigation }) => {
     console.log(userName, userContact, userAddress);
 
     if (!userName) {
-      alert('Por favor preencha o nome !');
+      alert('Pro favor ingrese el nombre!');
       return;
     }
     if (!userContact) {
-      alert('Por favor preencha o contato');
+      alert('Pro favor ingrese el contacto');
       return;
     }
     if (!userAddress) {
-      alert('Por favor preencha o endereço !');
+      alert('Pro favor ingrese la direccion!');
       return;
     }
 
@@ -41,8 +41,8 @@ const RegisterUser = ({ navigation }) => {
           console.log('Results', results.rowsAffected);
           if (results.rowsAffected > 0) {
             Alert.alert(
-              'Sucesso',
-              'Usuário Registrado com Sucesso !!!',
+              'Exito',
+              'Usuario registrado con exito!!!',
               [
                 {
                   text: 'Ok',
@@ -51,7 +51,7 @@ const RegisterUser = ({ navigation }) => {
               ],
               { cancelable: false }
             );
-          } else alert('Erro ao tentar Registrar o Usuário !!!');
+          } else alert('Error al intentar el usuario!!!');
         }
       );
     });
@@ -66,14 +66,14 @@ const RegisterUser = ({ navigation }) => {
               behavior="padding"
               style={{ flex: 1, justifyContent: 'space-between' }}>
               <Mytextinput
-                placeholder="Entre com o Nome"
+                placeholder="Nombre"
                 onChangeText={
                   (userName) => setUserName(userName)
                 }
                 style={{ padding: 10 }}
               />
               <Mytextinput
-                placeholder="Entre com o Telefone"
+                placeholder="Telefono"
                 onChangeText={
                   (userContact) => setUserContact(userContact)
                 }
@@ -82,7 +82,7 @@ const RegisterUser = ({ navigation }) => {
                 style={{ padding: 10 }}
               />
               <Mytextinput
-                placeholder="Entre com o Endereço"
+                placeholder="Direccion"
                 onChangeText={
                   (userAddress) => setUserAddress(userAddress)
                 }
@@ -91,7 +91,7 @@ const RegisterUser = ({ navigation }) => {
                 multiline={true}
                 style={{ textAlignVertical: 'top', padding: 10 }}
               />
-              <Mybutton title="Salvar" customClick={register_user} />
+              <Mybutton title="Guardar" customClick={register_user} />
             </KeyboardAvoidingView>
           </ScrollView>
         </View>
